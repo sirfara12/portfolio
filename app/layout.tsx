@@ -25,9 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {children}
+        <div className="fixed inset-0 bg-gradient-to-br from-blue-400/20 via-white/20 to-purple-500/20 pointer-events-none z-0"></div>
+        <div className="flower-layer-2">🌺 💮 🌸 🏵️ 🌼 💐 🌺 🌸 💮 🏵️ 🌼 🌸 💐 🌺 🌸</div>
+        <div className="flower-layer-3">🌼 🌸 💮 🌺 🏵️ 💐 🌸 🌺 💮 🏵️ 🌼 🌸 💐 🌺 🌸</div>
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
